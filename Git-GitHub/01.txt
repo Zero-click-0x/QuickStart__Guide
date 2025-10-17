@@ -1,0 +1,62 @@
+WRITE => ADD => COMMIT => PUSH
+git --version
+
+=====> First Register For Sync
+git config --global user.email "your-email@example.com"
+git config --global user.name "Your Name"
+git config --list                                            (Check For Email And Name)
+
+add custor to path => ctrl + shift +p => Install code/codium/cursor command To Path
+git config --global core.editor "code/codium/cursor --wait"                (Run this in termial after add path)   
+
+=====> Now Get Ready At System Level
+pwd || Move to working directory first
+git status                                                   (So Dont Override Existing)
+git init                                                     (Initialize)
+git add file1.txt file2.txt OR .                             (. To Add All Files of current and subdirectories)||(Staging Area/Tracking Starts)
+git commit -m "Commit Message"                              ("Message Of New Change")
+git remote -v                                                (Check Fetch/Push Path)
+git remote add origin https://github.com/ByteMeNot-glitch/Git-Github_CheatSheet.git
+git push -u origin main (added upstream default so afterwards only use => git push)
+
+=====> Branch,Merge & Conflict Resolve
+Always commit or stash changes before switching branches
+git branch                                                  # list branches
+git branch bug-fix                                          # create new branch bug-fix 
+git switch bug-fix                                          # switch to branch bug-fix
+git switch -c dark-mode                                     # create + switch instant
+git merge testing                                           # merge 'testing' into current branch
+git add *                                                   # stage visible files only (no hidden, no subdirs)
+git branch -m oldname newname                               # rename a branch
+git branch -d bname                                         # Delete A Branch
+
+=====> Clone/ Sync Data 
+git clone git@github.com:Zero-click-0x/Project_REPO.git (SSH First Time) 
+
+git pull                                                    # Make sure that project Dir
+git pull origin main                                        # When on diff Branch And force Pull to get latest update
+ 
+=====> Some More FineTune
+git diff --stage
+git diff <branch-name-one> <branch-name-two>
+
+git stash                                                    (Stash is a way to save your changes in a temporary location) Never Apply One branch Stash To anther Branch
+git stash list
+git stash apply stash@{0} || git stash apply stash@{0} <branch-name>
+git stash drop                                               (Only Top One Get Drop)
+git stash pop                                                 apply recent stashed changes and remove
+git stash clear
+
+git tag <tag-name>                                            # create a tag name
+git tag                                                       # list all tag
+git tag -a abc -m "Release 1.0"                               # Tag with Release
+git push origin tagName                                       # Push tag to github
+git tag -d tagName                                            # delete a tag
+
+git rebase branchName                                         (Always used on Sub-Branch to get latest work of Main-Branch & No commit message)
+
+=====> Recover lost commits or changes
+git log || git log --oneline || git reflog                    (Get More Detailed checkpoints)
+git reset --hard <commit-hash>                                Go to specific commit if something Messup using hash by (git log --oneline)
+git reset --hard HEAD@{1}                                     Avoid
+
