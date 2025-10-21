@@ -1,0 +1,28 @@
+TypeScript Is SuperSet Of JavaScript With A Programming Language.
+Features:- Type Safety + Static Checking
+
+########################## Global - Terminal #######################################
+=> Install Node.js and Check                        node -v
+=> Also check for NPM and Check                     npm -v
+=> npm install typescript --save -dev
+=> sudo npm install -g typescript And check         tsc -v
+
+
+########################## IDE - Terminal #######################################
+=> Generate tsconfig.json                           tsc --init
+
+=> Modify tsconfig 
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "es2020",
+    "target": "es2020",
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
+    "verbatimModuleSyntax": false,
+    "moduleDetection": "auto",
+
+=> mkdir src dist
+=> Constant Update Values To JavaScript File        tsc -w
+
+=> (Skip) Generate package.json                            npm init -y
