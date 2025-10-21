@@ -7,7 +7,6 @@ Features:- Type Safety + Static Checking
 => npm install typescript --save -dev
 => sudo npm install -g typescript And check         tsc -v
 
-
 ########################## IDE - Terminal #######################################
 => Generate tsconfig.json                           tsc --init
 
