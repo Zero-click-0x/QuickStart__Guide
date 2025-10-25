@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap");
 
+/* Inter Regular */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* || RESET */
 *,
 *::after,
@@ -19,6 +27,21 @@ input,
 button,
 textarea {
   font: inherit;
+}
+
+/* || UTILITY CLASSES */
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
 }
 
 /* || VARIABLES */
@@ -75,20 +98,6 @@ textarea {
     --LINK-HOVER: orange;
     --NAV-BGCOLOR: rgb(20, 20, 20);
   }
-}
-
-/* || UTILITY CLASSES */
-.offscreen {
-  position: absolute;
-  left: -10000px;
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-
-.center {
-  text-align: center;
 }
 
 /* || GENERAL STYLES */
