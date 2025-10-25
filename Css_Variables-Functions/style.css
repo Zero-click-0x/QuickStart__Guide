@@ -29,21 +29,6 @@ textarea {
   font: inherit;
 }
 
-/* || UTILITY CLASSES */
-
-.offscreen {
-  position: absolute;
-  left: -10000px;
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-
-.center {
-  text-align: center;
-}
-
 /* || VARIABLES */
 
 :root {
@@ -98,6 +83,21 @@ textarea {
     --LINK-HOVER: orange;
     --NAV-BGCOLOR: rgb(20, 20, 20);
   }
+}
+
+/* || UTILITY CLASSES */
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
 }
 
 /* || GENERAL STYLES */
